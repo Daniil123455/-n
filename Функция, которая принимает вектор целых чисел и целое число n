@@ -1,0 +1,8 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+std::vector<int> increment_vector(std::vector<int> v, int n) {
+  std::transform(std::begin(v), std::end(v), std::begin(v), [](int x) { return x + n; });
+  return v;
+}
